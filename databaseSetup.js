@@ -1,37 +1,12 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 const { type } = require('os');
-
-// Get the URI
-const uri = process.env.DATABASE_URI;
-
-// AddressSchema
-const addressSchema = new mongoose.Schema({
-    street: String,
-    city: String,
-    state: String,
-    zip: String
-});
-
-// UserSchema
-const userSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    age: Number,
-    phone: String,
-    addresses: [addressSchema],
-    createdAt: { type: Date, default: Date.now() },
-    updatedAt: { type: Date, default: Date.now() },
-    isActive: { type: Boolean, default: true }
-});
-
-// Create the model using the Schema
-const User = mongoose.model('User', userSchema);
+const { uri, User } = require("./conn");
 
 // Data to be inserted
 const user = {
-    name: 'Sonal',
-    email: 'sonal@7edge.com',
+    name: 'Reshma',
+    email: 'reshma@7edge.com',
     age: 22,
     phone: '947-558-3402',
     addresses: [
@@ -41,9 +16,18 @@ const user = {
 
 const users = [
     {
-        name: 'Alice',
-        email: 'alice@example.com',
-        age: 25,
+        name: 'Sonal',
+        email: 'sonal@7edge.com',
+        age: 22,
+        phone: '947-558-3402',
+        addresses: [
+            { street: '123 Main St', city: 'Hometown', state: 'CA', zip: '12345' }
+        ]
+    },
+    {
+        name: 'Alice Res',
+        email: 'resalice@google.com',
+        age: 22,
         phone: '123-456-7890',
         addresses: [
             { street: '123 Main St', city: 'Hometown', state: 'CA', zip: '12345' }
@@ -51,7 +35,7 @@ const users = [
     },
     {
         name: 'Bob',
-        email: 'bob@example.com',
+        email: 'bob@google.com',
         age: 30,
         phone: '987-654-3210',
         addresses: [
@@ -61,7 +45,35 @@ const users = [
     },
     {
         name: 'Charlie',
-        email: 'charlie@example.com',
+        email: 'charlie@hotmail.com',
+        age: 35,
+        phone: '555-555-5555',
+        addresses: [
+            { street: '101 Pine St', city: 'Smalltown', state: 'TX', zip: '54321' }
+        ]
+    },
+    {
+        name: 'Alice',
+        email: 'alice@google.com',
+        age: 25,
+        phone: '123-456-7890',
+        addresses: [
+            { street: '123 Main St', city: 'Hometown', state: 'CA', zip: '12345' }
+        ]
+    },
+    {
+        name: 'Bobster',
+        email: 'bobby@gmail.com',
+        age: 30,
+        phone: '987-654-3210',
+        addresses: [
+            { street: '456 Elm St', city: 'Hometown', state: 'CA', zip: '12345' },
+            { street: '789 Oak St', city: 'Big City', state: 'NY', zip: '67890' }
+        ]
+    },
+    {
+        name: 'Soniya',
+        email: 'soni@hotmail.com',
         age: 35,
         phone: '555-555-5555',
         addresses: [
