@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const { uri, User } = require("./conn");
-const { formatFindResult, emailFormatedResult, ageFormatedResult, nameFormatedResult } = require("./util");
+const { uri, User } = require("./utils/conn");
+const { formatFindResult, emailFormatedResult, ageFormatedResult, nameFormatedResult } = require("./utils/util");
 
 async function main() {
     try {

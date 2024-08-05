@@ -1,7 +1,7 @@
 // This File contains the connection URI and the User Schema 
 require('dotenv').config();
 const mongoose = require('mongoose');
-const { type } = require('os');
+
 
 // Get the URI
 const uri = process.env.DATABASE_URI;

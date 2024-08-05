@@ -22,7 +22,7 @@ function emailFormatedResult(results){
 function nameFormatedResult(results){
     console.log(`\nNames Sorted in Ascending Order \n`);
     results.forEach((value)=>{
-        console.log(`${value.name}\n`)
+        console.log(`${value.name}`)
     });
 }
 module.exports = {formatFindResult,emailFormatedResult,ageFormatedResult,nameFormatedResult};

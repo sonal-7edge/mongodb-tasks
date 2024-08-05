@@ -1,7 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const { type } = require('os');
-const { uri, User } = require("./conn");
+const { uri, User } = require("./utils/conn");
 
 // Data to be inserted
 const user = {
