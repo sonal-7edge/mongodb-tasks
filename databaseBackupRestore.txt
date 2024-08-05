@@ -1,0 +1,9 @@
+# Creating the Backup of database
+mongodump --db mongo_tasks --out /home/sonal/Documents/Learning/MongoDB/mongodb-tasks/
+
+# Restoring the database from the Backup 
+mongorestore --db  mongo_tasks /home/sonal/Documents/Learning/MongoDB/mongodb-tasks/mongo_tasks
+
+# Bash Script
+chmod +x backup_and_restore.sh
+./backup_and_restore.sh

@@ -24,7 +24,7 @@ async function main() {
             console.log(`Successfully inserted: ${value.title}\nId: ${value._id}\n`);
         });
 
-    } catch {
+    } catch(error) {
         console.error('Database Connection Failed');
 
     } finally {

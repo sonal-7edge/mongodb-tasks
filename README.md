@@ -23,8 +23,8 @@ Tasks Performed for MongoDB assessment
     - databaseModel.js
 
 ### 7. Database Backup and Restore
+    - databaseDrop.js
     - databaseBackupRestore.txt
 
 ### 8. Referencing Documnents
     - databaseReference.js
-        
