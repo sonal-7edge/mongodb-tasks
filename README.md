@@ -26,5 +26,11 @@ Tasks Performed for MongoDB assessment
     - databaseDrop.js
     - databaseBackupRestore.txt
 
-### 8. Referencing Documnents
+### 8. Embedded Documnents
+    - databaseEmbedded.js
+
+### 9. Query Embedded Documnents
+    - databaseQEmbedded.js
+
+### 10. Referencing Documnents
     - databaseReference.js

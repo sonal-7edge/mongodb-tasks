@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
     addresses: [addressSchema],
     createdAt: { type: Date, default: Date.now() },
     updatedAt: { type: Date, default: Date.now() },
-    isActive: { type: Boolean, default: true }
+    isActive: { type: Boolean, default: false }
 });
 
 // PostSchema
