@@ -26,7 +26,19 @@ const userSchema = new mongoose.Schema({
     isActive: { type: Boolean, default: true }
 });
 
-// Create the model using the Schema
+// PostSchema
+const postSchema = new mongoose.Schema({
+    title: String,
+    content: String,
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    createdAt: { type: Date, default: Date.now() },
+    updatedAt: { type: Date, default: Date.now() }
+});
+
+// Create the model using the `userSchema` Schema
 const User = mongoose.model('User', userSchema);
 
-module.exports = {uri, User};
+// Create the model using the `postSchema` Schema
+const Post = mongoose.model('Post', postSchema);
+
+module.exports = { uri, User, Post };
